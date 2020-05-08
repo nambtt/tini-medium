@@ -6,6 +6,7 @@ import {
     toggleClose,
     toggleOpen
 } from './../redux/actions/actions'
+import Config from '../config'
 
 class SignInWith extends Component {
 
@@ -37,7 +38,7 @@ class SignInWith extends Component {
 
                             <li className="omniauth-button google">
                                 <GoogleLogin className="button google"
-                                    clientId="171727943950-2vkk4tlpv8qn8m5t9p323k1p38f1t1p6.apps.googleusercontent.com"
+                                    clientId={Config.GOOGLE_LOGIN_CLIENT_ID}
                                     onSuccess={responseGoogle}
                                     onFailure={responseGoogle} >
                                     <i className="fa fa-google"></i><span> SignIn with Google</span>
